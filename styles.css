@@ -1,0 +1,427 @@
+/* ========================================
+   RESET Y ESTILOS BASE
+   ======================================== */
+
+/* Reset básico para eliminar márgenes y padding por defecto */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box; /* Incluye padding y border en el ancho total */
+}
+
+/* Estilos base del body */
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    line-height: 1.6; /* Mejora la legibilidad */
+    color: #333;
+    background-color: #f8f9fa;
+}
+
+/* Contenedor principal - limita el ancho en pantallas grandes */
+.container {
+    max-width: 1200px;
+    margin: 0 auto; /* Centra el contenedor */
+    padding: 0 20px; /* Espaciado lateral */
+}
+
+
+/* ========================================
+   HEADER Y NAVEGACIÓN
+   ======================================== */
+
+.header {
+    background-color: #fff;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Sombra sutil */
+    position: sticky; /* Se queda fijo al hacer scroll */
+    top: 0;
+    z-index: 100; /* Aparece sobre otros elementos */
+}
+
+.header-content {
+    display: flex; /* Flexbox para alinear logo y navegación */
+    justify-content: space-between; /* Espacia los elementos a los extremos */
+    align-items: center; /* Centra verticalmente */
+    padding: 20px 0;
+}
+
+.logo h1 {
+    font-size: 24px;
+    color: #2c7a7b; /* Color verde azulado */
+}
+
+/* Navegación */
+.nav {
+    display: flex;
+    gap: 30px; /* Espacio entre links */
+}
+
+.nav-link {
+    color: #555;
+    text-decoration: none;
+    font-weight: 500;
+    transition: color 0.3s; /* Transición suave al hacer hover */
+}
+
+/* Efecto hover en links de navegación */
+.nav-link:hover {
+    color: #2c7a7b;
+}
+
+/* Link activo */
+.nav-link.active {
+    color: #2c7a7b;
+    font-weight: 600;
+}
+
+
+/* ========================================
+   SECCIÓN HERO
+   ======================================== */
+
+.hero {
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    color: white;
+    padding: 80px 0;
+    text-align: center;
+}
+
+.hero-title {
+    font-size: 42px;
+    margin-bottom: 20px;
+    font-weight: 700;
+}
+
+.hero-text {
+    font-size: 18px;
+    max-width: 600px;
+    margin: 0 auto; /* Centra el texto */
+    line-height: 1.8;
+    opacity: 0.95;
+}
+
+
+/* ========================================
+   GRID DE POSTS
+   ======================================== */
+
+.main {
+    padding: 60px 0;
+}
+
+.section-title {
+    font-size: 32px;
+    color: #2d3748;
+    margin-bottom: 40px;
+    text-align: center;
+}
+
+/* Grid de posts usando Flexbox */
+.posts-grid {
+    display: flex;
+    flex-wrap: wrap; /* Permite que las cards bajen a la siguiente línea */
+    gap: 30px; /* Espacio entre cards */
+}
+
+/* Cada card de post */
+.post-card {
+    background: white;
+    border-radius: 8px; /* Bordes redondeados */
+    overflow: hidden; /* Oculta el desbordamiento de la imagen */
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s, box-shadow 0.3s; /* Animación suave */
+    flex: 1 1 calc(50% - 15px); /* Dos columnas en desktop */
+    min-width: 280px; /* Ancho mínimo */
+}
+
+/* Efecto hover en las cards */
+.post-card:hover {
+    transform: translateY(-5px); /* Sube ligeramente */
+    box-shadow: 0 4px 16px rgba(0, 0, 0, 0.15);
+}
+
+/* Imagen del post */
+.post-image {
+    width: 100%;
+    height: 200px;
+    overflow: hidden;
+}
+
+.post-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Cubre el área sin distorsión */
+    display: block;
+}
+
+/* Contenido del post */
+.post-content {
+    padding: 25px;
+}
+
+.post-date {
+    display: inline-block;
+    color: #718096;
+    font-size: 14px;
+    margin-bottom: 10px;
+}
+
+.post-title {
+    font-size: 22px;
+    color: #2d3748;
+    margin-bottom: 15px;
+    line-height: 1.3;
+}
+
+.post-excerpt {
+    color: #4a5568;
+    margin-bottom: 20px;
+    line-height: 1.6;
+}
+
+/* Botón de leer más */
+.btn {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #2c7a7b;
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+    font-weight: 500;
+    transition: background-color 0.3s;
+}
+
+.btn:hover {
+    background-color: #234e52; /* Color más oscuro al hacer hover */
+}
+
+
+/* ========================================
+   PÁGINA DE POST INDIVIDUAL
+   ======================================== */
+
+.post-header {
+    background-color: white;
+    padding: 60px 0 40px;
+    text-align: center;
+}
+
+.post-header-title {
+    font-size: 42px;
+    color: #2d3748;
+    margin-bottom: 15px;
+    max-width: 800px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.post-meta {
+    color: #718096;
+    font-size: 16px;
+}
+
+.post-featured-image {
+    width: 100%;
+    max-width: 900px;
+    margin: 0 auto 40px;
+    display: block;
+}
+
+.post-featured-image img {
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+}
+
+.post-body {
+    background-color: white;
+    padding: 40px;
+    max-width: 800px;
+    margin: 0 auto 40px;
+    border-radius: 8px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.post-body h2 {
+    font-size: 28px;
+    color: #2d3748;
+    margin-top: 30px;
+    margin-bottom: 15px;
+}
+
+.post-body p {
+    margin-bottom: 20px;
+    line-height: 1.8;
+    color: #4a5568;
+}
+
+.back-button {
+    text-align: center;
+    padding: 40px 0;
+}
+
+
+/* ========================================
+   PÁGINA ABOUT
+   ======================================== */
+
+.about-section {
+    background-color: white;
+    padding: 60px 0;
+}
+
+.about-content {
+    max-width: 800px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.profile-image {
+    width: 200px;
+    height: 200px;
+    border-radius: 50%; /* Imagen circular */
+    margin: 0 auto 30px;
+    overflow: hidden;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+.profile-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.about-content h2 {
+    font-size: 36px;
+    color: #2d3748;
+    margin-bottom: 20px;
+}
+
+.about-text {
+    font-size: 18px;
+    line-height: 1.8;
+    color: #4a5568;
+    margin-bottom: 40px;
+    text-align: left;
+}
+
+.interests {
+    margin-top: 40px;
+}
+
+.interests h3 {
+    font-size: 24px;
+    color: #2d3748;
+    margin-bottom: 20px;
+}
+
+.interests-list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 15px;
+    justify-content: center;
+}
+
+.interest-tag {
+    background-color: #e6fffa;
+    color: #2c7a7b;
+    padding: 10px 20px;
+    border-radius: 20px;
+    font-weight: 500;
+}
+
+
+/* ========================================
+   FOOTER
+   ======================================== */
+
+.footer {
+    background-color: #2d3748;
+    color: white;
+    padding: 40px 0;
+    margin-top: 60px;
+}
+
+.footer-content {
+    text-align: center;
+}
+
+.footer-text {
+    margin-bottom: 20px;
+}
+
+.social-links {
+    display: flex;
+    gap: 20px;
+    justify-content: center;
+}
+
+.social-link {
+    color: white;
+    text-decoration: none;
+    transition: color 0.3s;
+}
+
+.social-link:hover {
+    color: #81e6d9; /* Color verde claro al hacer hover */
+}
+
+
+/* ========================================
+   RESPONSIVE - TABLETS Y MÓVILES
+   ======================================== */
+
+/* Tablets (menor a 768px) */
+@media (max-width: 768px) {
+    .hero-title {
+        font-size: 32px;
+    }
+    
+    .hero-text {
+        font-size: 16px;
+    }
+    
+    /* Cards ocupan todo el ancho */
+    .post-card {
+        flex: 1 1 100%;
+    }
+    
+    .post-header-title {
+        font-size: 32px;
+    }
+    
+    .post-body {
+        padding: 30px 20px;
+    }
+}
+
+/* Móviles (menor a 480px) */
+@media (max-width: 480px) {
+    .header-content {
+        flex-direction: column;
+        gap: 15px;
+    }
+    
+    .nav {
+        gap: 20px;
+    }
+    
+    .hero {
+        padding: 60px 0;
+    }
+    
+    .hero-title {
+        font-size: 28px;
+    }
+    
+    .section-title {
+        font-size: 26px;
+    }
+    
+    .post-title {
+        font-size: 20px;
+    }
+    
+    .social-links {
+        flex-wrap: wrap;
+    }
+}
