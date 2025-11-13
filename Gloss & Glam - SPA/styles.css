@@ -1,0 +1,700 @@
+/* ========================================
+   RESET Y ESTILOS BASE
+   ======================================== */
+
+/* Reset básico para eliminar márgenes y padding por defecto */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Georgia', serif;
+    background-color: #1a1a1a;
+    color: #ffffff;
+    line-height: 1.6;
+}
+
+/* Contenedor principal - limita el ancho en pantallas grandes */
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+
+/* ========================================
+   HEADER Y NAVEGACIÓN
+   ======================================== */
+
+.header {
+    background-color: #1a1a1a;
+    padding: 20px 0;
+    border-bottom: 1px solid #333;
+}
+
+.header-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+/* Logo */
+.logo {
+    font-size: 28px;
+    font-weight: 700;
+    letter-spacing: 1px;
+}
+
+.logo-gloss {
+    color: #ffffff;
+    font-weight: 700;
+}
+
+.logo-ampersand {
+    color: #ffffff;
+    font-weight: 300;
+    margin: 0 5px;
+}
+
+.logo-glam {
+    color: #d4af37;
+    font-weight: 400;
+}
+
+/* Navegación */
+.nav {
+    display: flex;
+    gap: 35px;
+    align-items: center;
+}
+
+.nav-link {
+    color: #ffffff;
+    text-decoration: none;
+    font-size: 15px;
+    font-weight: 400;
+    transition: color 0.3s;
+    position: relative;
+}
+
+.nav-link:hover {
+    color: #d4af37;
+}
+
+.nav-link.active {
+    color: #ffffff;
+}
+
+/* Línea dorada debajo del link activo */
+.nav-link.active::after {
+    content: '';
+    position: absolute;
+    bottom: -8px;
+    left: 0;
+    right: 0;
+    height: 2px;
+    background-color: #d4af37;
+}
+
+/* Iconos en header */
+.header-icons {
+    display: flex;
+    gap: 15px;
+    align-items: center;
+}
+
+.icon-button {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background-color: #d4af37;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #1a1a1a;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 18px;
+    transition: transform 0.3s, background-color 0.3s;
+    border: none;
+    cursor: pointer;
+}
+
+.icon-button:hover {
+    transform: scale(1.1);
+    background-color: #c29d2f;
+}
+
+/* Botón Sign Up */
+.btn-signup {
+    background-color: #d4af37;
+    color: #1a1a1a;
+    padding: 12px 35px;
+    border-radius: 8px;
+    text-decoration: none;
+    font-weight: 500;
+    font-size: 15px;
+    transition: background-color 0.3s, transform 0.3s;
+}
+
+.btn-signup:hover {
+    background-color: #c29d2f;
+    transform: translateY(-2px);
+}
+
+
+/* ========================================
+   HERO SECTION
+   ======================================== */
+
+.hero {
+    text-align: center;
+    padding: 80px 0;
+    background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 300"><path d="M100,150 Q200,100 300,150" stroke="%23333" stroke-width="1" fill="none"/><circle cx="900" cy="200" r="30" stroke="%23333" stroke-width="1" fill="none"/></svg>');
+    background-size: cover;
+    border-bottom: 1px solid #333;
+}
+
+.hero-title {
+    font-size: 56px;
+    margin-bottom: 20px;
+    font-weight: 300;
+}
+
+.breadcrumb {
+    color: #999;
+    font-size: 14px;
+}
+
+.breadcrumb a {
+    color: #999;
+    text-decoration: none;
+}
+
+.breadcrumb a:hover {
+    color: #d4af37;
+}
+
+
+/* ========================================
+   SECCIÓN OUR SERVICES
+   ======================================== */
+
+.services-intro {
+    text-align: center;
+    padding: 80px 0 40px;
+}
+
+.section-title {
+    font-size: 42px;
+    margin-bottom: 20px;
+    font-weight: 300;
+}
+
+.section-subtitle {
+    color: #999;
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+/* Grid de servicios */
+.services-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 20px;
+    padding: 40px 0;
+}
+
+.service-card {
+    background-color: transparent;
+    border: 1px solid #333;
+    border-radius: 8px;
+    padding: 40px 20px;
+    text-align: center;
+    transition: border-color 0.3s, transform 0.3s;
+}
+
+/* Efecto hover en las cards de servicios */
+.service-card:hover {
+    border-color: #d4af37;
+    transform: translateY(-5px);
+}
+
+.service-icon {
+    font-size: 48px;
+    color: #d4af37;
+    margin-bottom: 20px;
+}
+
+.service-name {
+    font-size: 18px;
+    font-weight: 300;
+}
+
+
+/* ========================================
+   SECCIÓN PACKAGES
+   ======================================== */
+
+.packages-section {
+    padding: 80px 0;
+}
+
+.packages-intro {
+    text-align: center;
+    margin-bottom: 60px;
+}
+
+.packages-subtitle {
+    color: #999;
+    font-size: 14px;
+}
+
+.packages-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 30px;
+}
+
+.package-card {
+    background-color: transparent;
+    border: 1px solid #333;
+    border-radius: 12px;
+    padding: 40px 30px;
+    text-align: center;
+    transition: border-color 0.3s;
+}
+
+.package-card:hover {
+    border-color: #d4af37;
+}
+
+/* Card destacada (featured) */
+.package-card.featured {
+    border-color: #d4af37;
+}
+
+.package-title {
+    font-size: 24px;
+    margin-bottom: 20px;
+    font-weight: 300;
+}
+
+.package-price {
+    font-size: 42px;
+    color: #d4af37;
+    margin-bottom: 30px;
+}
+
+.package-features {
+    list-style: none;
+    margin-bottom: 30px;
+    text-align: left;
+}
+
+.package-features li {
+    padding: 10px 0;
+    color: #ccc;
+    font-size: 14px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+/* Checkmark dorado antes de cada feature */
+.package-features li:before {
+    content: "✓";
+    color: #d4af37;
+    font-weight: bold;
+    font-size: 18px;
+}
+
+.btn-package {
+    background-color: transparent;
+    border: 1px solid #d4af37;
+    color: #d4af37;
+    padding: 12px 40px;
+    border-radius: 5px;
+    text-decoration: none;
+    display: inline-block;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+.btn-package:hover,
+.btn-package.featured {
+    background-color: #d4af37;
+    color: #1a1a1a;
+}
+
+
+/* ========================================
+   SECCIÓN APPOINTMENT
+   ======================================== */
+
+.appointment-section {
+    padding: 80px 0;
+    text-align: center;
+}
+
+.appointment-intro {
+    margin-bottom: 60px;
+}
+
+/* Calendario */
+.calendar {
+    background-color: #2a2a2a;
+    border: 1px solid #333;
+    border-radius: 12px;
+    padding: 30px;
+    max-width: 500px;
+    margin: 0 auto 40px;
+}
+
+.calendar-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.calendar-month {
+    font-size: 18px;
+}
+
+.calendar-nav {
+    background: none;
+    border: none;
+    color: #d4af37;
+    font-size: 20px;
+    cursor: pointer;
+    transition: opacity 0.3s;
+}
+
+.calendar-nav:hover {
+    opacity: 0.7;
+}
+
+.calendar-grid {
+    display: grid;
+    grid-template-columns: repeat(7, 1fr);
+    gap: 10px;
+}
+
+.calendar-day-header {
+    color: #666;
+    font-size: 12px;
+    padding: 10px;
+    text-align: center;
+}
+
+.calendar-day {
+    padding: 10px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    text-align: center;
+}
+
+.calendar-day:hover {
+    background-color: #333;
+}
+
+/* Día seleccionado en el calendario */
+.calendar-day.selected {
+    background-color: #d4af37;
+    color: #1a1a1a;
+    font-weight: bold;
+}
+
+.calendar-day.empty {
+    cursor: default;
+    visibility: hidden;
+}
+
+.calendar-day.empty:hover {
+    background-color: transparent;
+}
+
+/* Selector de tiempo */
+.time-selector {
+    margin-bottom: 40px;
+}
+
+.time-selector h3 {
+    margin-bottom: 20px;
+    font-weight: 300;
+    font-size: 24px;
+}
+
+.time-slots {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    flex-wrap: wrap;
+}
+
+.time-slot {
+    background-color: transparent;
+    border: 1px solid #333;
+    color: #ffffff;
+    padding: 12px 24px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: all 0.3s;
+    font-size: 14px;
+}
+
+.time-slot:hover {
+    border-color: #d4af37;
+}
+
+.time-slot.selected {
+    background-color: #d4af37;
+    color: #1a1a1a;
+    border-color: #d4af37;
+}
+
+/* Formulario de cita */
+.appointment-form {
+    max-width: 800px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+}
+
+.form-input,
+.form-select {
+    background-color: #2a2a2a;
+    border: 1px solid #333;
+    color: #ffffff;
+    padding: 15px;
+    border-radius: 8px;
+    font-size: 14px;
+    font-family: 'Georgia', serif;
+}
+
+.form-input::placeholder {
+    color: #666;
+}
+
+.form-select {
+    cursor: pointer;
+}
+
+/* Botón de submit que ocupa las 2 columnas */
+.btn-submit {
+    grid-column: 1 / -1;
+    background-color: #d4af37;
+    color: #1a1a1a;
+    padding: 15px 40px;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    font-weight: 500;
+}
+
+.btn-submit:hover {
+    background-color: #c29d2f;
+}
+
+
+/* ========================================
+   SECCIÓN NEWSLETTER
+   ======================================== */
+
+.newsletter-section {
+    padding: 80px 0;
+    text-align: center;
+}
+
+.newsletter-form {
+    max-width: 500px;
+    margin: 30px auto 0;
+    display: flex;
+    gap: 15px;
+}
+
+.newsletter-input {
+    flex: 1;
+    background-color: #2a2a2a;
+    border: 1px solid #333;
+    color: #ffffff;
+    padding: 15px 20px;
+    border-radius: 8px;
+    font-size: 14px;
+}
+
+.newsletter-input::placeholder {
+    color: #666;
+}
+
+.btn-newsletter {
+    background-color: #d4af37;
+    color: #1a1a1a;
+    padding: 15px 40px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    font-weight: 500;
+}
+
+.btn-newsletter:hover {
+    background-color: #c29d2f;
+}
+
+
+/* ========================================
+   FOOTER
+   ======================================== */
+
+.footer {
+    background-color: #0f0f0f;
+    padding: 60px 0 30px;
+    border-top: 1px solid #333;
+}
+
+.footer-content {
+    display: grid;
+    grid-template-columns: 2fr 1fr 1fr 1fr 1fr;
+    gap: 40px;
+    margin-bottom: 40px;
+}
+
+.footer-column h3 {
+    margin-bottom: 20px;
+    font-weight: 300;
+    font-size: 18px;
+}
+
+.footer-text {
+    color: #999;
+    font-size: 14px;
+    line-height: 1.8;
+    margin-bottom: 20px;
+}
+
+.footer-links {
+    list-style: none;
+}
+
+.footer-links li {
+    margin-bottom: 10px;
+}
+
+.footer-links a {
+    color: #999;
+    text-decoration: none;
+    font-size: 14px;
+    transition: color 0.3s;
+}
+
+.footer-links a:hover {
+    color: #d4af37;
+}
+
+/* Iconos sociales del footer */
+.footer-social {
+    display: flex;
+    gap: 15px;
+}
+
+.footer-social-icon {
+    width: 40px;
+    height: 40px;
+    border: 1px solid #333;
+    border-radius: 5px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #ffffff;
+    text-decoration: none;
+    transition: border-color 0.3s;
+    font-weight: bold;
+}
+
+.footer-social-icon:hover {
+    border-color: #d4af37;
+}
+
+/* Items de contacto */
+.contact-item {
+    display: flex;
+    align-items: flex-start;
+    gap: 10px;
+    margin-bottom: 15px;
+    color: #999;
+    font-size: 14px;
+    line-height: 1.6;
+}
+
+.contact-icon {
+    color: #d4af37;
+    font-size: 16px;
+}
+
+
+/* ========================================
+   RESPONSIVE - TABLETS Y MÓVILES
+   ======================================== */
+
+/* Tablets (menor a 1024px) */
+@media (max-width: 1024px) {
+    .services-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .packages-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .footer-content {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+/* Móviles (menor a 768px) */
+@media (max-width: 768px) {
+    .header-content {
+        flex-direction: column;
+        gap: 20px;
+    }
+
+    .nav {
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    .hero-title {
+        font-size: 36px;
+    }
+
+    .section-title {
+        font-size: 32px;
+    }
+
+    .services-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .appointment-form {
+        grid-template-columns: 1fr;
+    }
+
+    .time-slots {
+        flex-direction: column;
+    }
+
+    .newsletter-form {
+        flex-direction: column;
+    }
+
+    .footer-content {
+        grid-template-columns: 1fr;
+    }
+}
